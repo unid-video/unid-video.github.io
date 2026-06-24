@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Unified Video Dense Prediction from Disjoint Data">
+  <meta property="og:title" content="Unified Video Dense Prediction from Disjoint Data">
+  <meta property="og:description" content="Unified Video Dense Prediction from Disjoint Data">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unified Video Dense Prediction from Disjoint Data</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://yihongsun.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://dynamo-depth.github.io">
+            Dynamo-Depth
+          </a>
+          <a class="navbar-item" href="https://mod-uv.github.io">
+            MOD-UV
+          </a>
+          <a class="navbar-item" href="https://tubelet-graph.github.io">
+            TubeletGraph
+          </a>
+          <a class="navbar-item" href="https://unid-video.github.io">
+            UniD
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Navigation Bar -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Unified Video Dense Prediction from Disjoint Data</h1>
+          <h2 class="title is-size-3">ECCV 2026</h2>
+
+          <!-- Authors -->
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://yihongsun.github.io">Yihong Sun</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/seoungwugoh/home">Seoung Wug Oh</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://gabriel-huang.github.io/">Jiahui Huang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~bharathh/">Bharath Hariharan</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://joonyoung-cv.github.io/">Joon-Young Lee</a><sup>1</sup></span>
+          </div>
+          <!-- Authors -->
+
+          <!-- Institutions -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Adobe Research &nbsp; </span>
+            <span class="author-block"><sup>2</sup>Cornell University</span>
+          </div>
+          <!-- Institutions -->
+
+          <!-- Links -->
+          <!-- PDF Links -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://unid-video.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://unid-video.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://unid-video.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://unid-video.github.io"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+          <!-- Links -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser -->
+<section class="hero teaser">
+  <div class="container is-four-fifths">
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column teaser" style="text-align: center">
+        <img class="teaser" src="./static/figures/teaser.jpg" style="width: 100%; height: auto;">
+      </div>
+    </div>
+    <div class="subtitle has-text-justified">
+      <p>
+        <strong>UniD</strong> takes an input video and jointly produces eight dense scene predictions in a single forward pass &mdash; while trained from disjoint, domain-specific datasets with no annotation overlap. 
+        <br></br>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Teaser -->
+
+
+<!-- Main Body -->
+<section class="section">
+  <div class="container">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Scene understanding requires simultaneous prediction about geometry, appearance, and semantics. 
+            However, existing task-specific annotations are fragmented across incompatible, domain-specific datasets. 
+            Current unified systems circumvent this by restricting training to fully co-annotated data, or by incurring the large computational cost of pseudo-labeling. 
+          </p>
+          <p>
+            To mitigate this, we introduce <strong>UniD</strong>, a unified video model that jointly predicts <strong>eight dense scene properties</strong> &mdash; depth, surface normals, semantic segmentation, boundaries, human parts, albedo, shading, and materials &mdash; all learned from <strong>disjoint, domain-specific datasets</strong>. 
+            We propose a simple yet effective distillation step in which per-task experts supervise a unified backbone through lightweight task projectors, eliminating the need for annotation overlap or pseudo-labeling. 
+          </p>
+          <p>
+            Our key insight is that the <strong>strong visual priors of a pretrained diffusion model</strong> are sufficient to bridge the domain gaps introduced by disjoint training sources, enabling robust generalization to scene-task combinations never seen during training. 
+            UniD achieves competitive performance against per-task specialists and multi-task baselines, with strong generalization to out-of-distribution scenarios and enhanced temporal and cross-task consistency. 
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract -->
+
+    &nbsp;
+
+    <!-- Motivation -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Motivation</h2>
+
+        <p style="color: var(--ink-light); line-height:1.8;">
+          Real-world scene understanding requires answering many questions at once: how far away are objects?
+          What are they made of? How does light interact with their surfaces?
+          Each of these questions has spawned its own specialized dataset &mdash; and those datasets are incompatible.
+        </p>
+
+        <div class="motivation-grid">
+          <div class="motivation-card">
+            <h4>🏗 Geometric data</h4>
+            <p>Depth and normals can be captured at scale via RGB-D cameras or stereo, but are confined to environments with limited semantic diversity (e.g., architectural interiors).</p>
+          </div>
+          <div class="motivation-card">
+            <h4>🏷 Semantic data</h4>
+            <p>Semantic annotations require expensive manual labeling over diverse internet images, yielding rich category diversity but rarely paired with geometric ground truth.</p>
+          </div>
+          <div class="motivation-card">
+            <h4>💡 Intrinsic data</h4>
+            <p>Intrinsic decompositions (albedo, shading) are prohibitively expensive to measure in the real world and largely confined to synthetic domains.</p>
+          </div>
+          <div class="motivation-card">
+            <h4>🎬 Video annotations</h4>
+            <p>Extending to video makes annotation scarcity even worse. Geometric video data is feasible; dense semantic or intrinsic video annotation is nearly infeasible at scale.</p>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:2.5rem;">
+          <strong>The core question:</strong> Can we learn unified dense prediction for both images and videos from
+          disjoint, domain-specific datasets &mdash; <em>without</em> pseudo-labeling and <em>without</em> annotation co-occurrence?
+        </div>
+
+      </div>
+    </div>
+    <!--/ Motivation -->
+
+    &nbsp;
+
+    <!-- Methodology -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column  is-max-desktop">
+        <h2 class="title is-3">Methodology</h2>
+
+        <div class="columns is-centered">
+          <div class="column method" style="text-align: center">
+            <img class="method" src="./static/figures/pipeline.jpg" style="width: 100%; height: auto;">
+          </div>
+        </div>
+
+        <div class="subtitle has-text-justified">
+          <p>
+            We present <strong>UniD</strong>, which learns in two stages.
+            <strong>(a) Task specialist training.</strong> For each task \(k\), a specialist backbone \(\mathcal{F}^k\) and pixel projector \(\mathcal{P}^k\) are finetuned on its task-specific dataset \(\mathcal{D}^k\) with loss \(\mathcal{L}^k\). Note that both the encoder \(\mathcal{E}\) and decoder \(\mathcal{D}'\) (in gray) are frozen during training.
+            <strong>(b) Unified model training.</strong> The unified backbone \(\mathcal{G}\) is then trained along with \(K\) latent projectors \(\{\Psi^k\}_{k=1}^K\) to reconstruct the latents \(\{\ell^k_i\}\) predicted by the frozen specialist \(\{\mathcal{F}^k\}_{k=1}^K\) (in gray).
+          </p>
+          <br>
+          <p>
+            Finally, during <strong>(c) streaming video inference</strong>, \(\mathcal{G}\) processes an input video via Extended Self-Attention (ESA), then the unified representation \(\mathbf{u}_i\) is decoded through each \(\Psi^k\), \(\mathcal{D}'\), and \(\mathcal{P}^k\) to simultaneously produce temporally consistent predictions across all \(K\) tasks.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Methodology -->
+  </div>
+</section>
+<!-- Main Body -->
+
+<!-- Qualitative Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Qualitative Comparison (Synthetic, In-Domain Data)</h2>
+      </div>
+    </div>
+  
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/interiornet_3FO4JUMO81V5/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/interiornet_3FO4JUMO81V5/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/interiornet_3FO4JUMO81V5/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Qualitative Results -->
+
+<!-- Qualitative Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Qualitative Comparison (In-the-Wild, Out-of-Domain Data)</h2>
+      </div>
+    </div>
+  
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/atkIaj9LDYg/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/atkIaj9LDYg/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/atkIaj9LDYg/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/Gh2yGSTIiSI/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/Gh2yGSTIiSI/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/Gh2yGSTIiSI/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/_CDGCdwmlr0/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/_CDGCdwmlr0/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/_CDGCdwmlr0/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/xD8VN2r_h2s/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/xD8VN2r_h2s/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/xD8VN2r_h2s/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/x3rgdHiDN7U/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/x3rgdHiDN7U/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/x3rgdHiDN7U/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/TRITURnylYA/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/TRITURnylYA/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/TRITURnylYA/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/LyfG0y8J4OM/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/LyfG0y8J4OM/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/LyfG0y8J4OM/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/JNN3H6xLbWQ/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/JNN3H6xLbWQ/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/JNN3H6xLbWQ/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/JBUJLqpqzwY/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/JBUJLqpqzwY/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/JBUJLqpqzwY/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/JaSnvS-XNas/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/JaSnvS-XNas/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/JaSnvS-XNas/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/XmN5TD3AjMY/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/XmN5TD3AjMY/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/XmN5TD3AjMY/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+  </div>
+</section>
+<!-- Qualitative Results -->
+
+
+<!-- Cross-Task Consistency Results -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Cross-Task Consistency Results (In-the-Wild, Out-of-Domain Data)</h2>
+      </div>
+    </div>
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="-bUZU7-Mbjs"
+             src="static/results/cross_task/-bUZU7-Mbjs/000000.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn active" data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="-bUZU7-Mbjs" data-src="static/results/cross_task/-bUZU7-Mbjs/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/-bUZU7-Mbjs/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/-bUZU7-Mbjs/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="9iF3KyCKf3Y"
+             src="static/results/cross_task/9iF3KyCKf3Y/000001.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000000.jpg">Depth</button>
+          <button class="frame-btn active"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="9iF3KyCKf3Y" data-src="static/results/cross_task/9iF3KyCKf3Y/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/9iF3KyCKf3Y/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/9iF3KyCKf3Y/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+    
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="zhpgbTT2w8c"
+             src="static/results/cross_task/zhpgbTT2w8c/000003.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000002.jpg">Albedo</button>
+          <button class="frame-btn active"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="zhpgbTT2w8c" data-src="static/results/cross_task/zhpgbTT2w8c/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/zhpgbTT2w8c/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/zhpgbTT2w8c/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="_Ij5JaEIcPc"
+             src="static/results/cross_task/_Ij5JaEIcPc/000005.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000004.jpg">Boundary</button>
+          <button class="frame-btn active"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="_Ij5JaEIcPc" data-src="static/results/cross_task/_Ij5JaEIcPc/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/_Ij5JaEIcPc/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/_Ij5JaEIcPc/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="cGE0S3V9uSc"
+             src="static/results/cross_task/cGE0S3V9uSc/000007.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn active"        data-gallery="cGE0S3V9uSc" data-src="static/results/cross_task/cGE0S3V9uSc/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/cGE0S3V9uSc/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/cGE0S3V9uSc/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="sav_049166"
+             src="static/results/cross_task/sav_049166/000004.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000003.jpg">Shading</button>
+          <button class="frame-btn active"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="sav_049166" data-src="static/results/cross_task/sav_049166/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/sav_049166/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/sav_049166/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="eGXbCUXAKYs"
+             src="static/results/cross_task/eGXbCUXAKYs/000006.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000005.jpg">Part Seg.</button>
+          <button class="frame-btn active"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="eGXbCUXAKYs" data-src="static/results/cross_task/eGXbCUXAKYs/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/eGXbCUXAKYs/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/eGXbCUXAKYs/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="Gqi6B4zQSjE"
+             src="static/results/cross_task/Gqi6B4zQSjE/000002.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000001.jpg">Normal</button>
+          <button class="frame-btn active"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="Gqi6B4zQSjE" data-src="static/results/cross_task/Gqi6B4zQSjE/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/Gqi6B4zQSjE/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/Gqi6B4zQSjE/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="hVKgY1ilx0Y"
+             src="static/results/cross_task/hVKgY1ilx0Y/000003.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000002.jpg">Albedo</button>
+          <button class="frame-btn active"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="hVKgY1ilx0Y" data-src="static/results/cross_task/hVKgY1ilx0Y/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/hVKgY1ilx0Y/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/hVKgY1ilx0Y/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="Km3UEW34R_Q"
+             src="static/results/cross_task/Km3UEW34R_Q/000001.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000000.jpg">Depth</button>
+          <button class="frame-btn active"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="Km3UEW34R_Q" data-src="static/results/cross_task/Km3UEW34R_Q/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/Km3UEW34R_Q/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/Km3UEW34R_Q/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="ngMJTWUanCA"
+             src="static/results/cross_task/ngMJTWUanCA/000005.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000004.jpg">Boundary</button>
+          <button class="frame-btn active"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn"        data-gallery="ngMJTWUanCA" data-src="static/results/cross_task/ngMJTWUanCA/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/ngMJTWUanCA/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/ngMJTWUanCA/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -10pt;">
+      <div class="column"><h2 class="title is-4">Input Frame</h2></div>
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video" style="text-align: center">
+        <img class="frame-img" data-gallery="WziMu14zT-w"
+             src="static/results/cross_task/WziMu14zT-w/000007.jpg" style="width: 100%">
+      </div>
+    </div>
+    <div class="columns is-centered has-text-centered" style="margin-top: 0pt; margin-bottom: 0pt;">
+      <div class="column">
+        <div class="frame-btn-group">
+          <button class="frame-btn" data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000000.jpg">Depth</button>
+          <button class="frame-btn"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000001.jpg">Normal</button>
+          <button class="frame-btn"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000002.jpg">Albedo</button>
+          <button class="frame-btn"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000003.jpg">Shading</button>
+          <button class="frame-btn"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000004.jpg">Boundary</button>
+          <button class="frame-btn"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000005.jpg">Part Seg.</button>
+          <button class="frame-btn"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000006.jpg">Sem. Seg.</button>
+          <button class="frame-btn active"        data-gallery="WziMu14zT-w" data-src="static/results/cross_task/WziMu14zT-w/000007.jpg">Mat. Seg.</button>
+        </div>
+        <h2 class="title is-size-4" style="margin-top:7pt">Please hover over the buttons to toggle between different tasks.</h2>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/cross_task/WziMu14zT-w/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/cross_task/WziMu14zT-w/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>   
+
+
+  </div>
+</section>
+<!-- Cross-Task Consistency Results -->
+
+
+<!-- Scripts -->
+<script>
+  function createLabelTable(labels, widths) {
+    const table = document.createElement('table');
+    table.style = "border-collapse: collapse; width:100%; margin-top:0pt;margin-bottom:3pt; padding: 0; border: 0;";
+
+    const tr = document.createElement('tr');
+    tr.style = "margin: 0; border: 0";
+
+    labels.forEach((label, index) => {
+      const td = document.createElement('td');
+      td.style = `width:${widths[index]}; padding: 0; margin: 0; border: 0; text-align: middle;`;
+
+      const h2 = document.createElement('h2');
+      h2.className = "has-text-centered subtitle is-6";
+      h2.textContent = label;
+
+      td.appendChild(h2);
+      tr.appendChild(td);
+    });
+
+    table.appendChild(tr);
+    return table;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Bind hover listeners via JS instead of inline onmouseenter (fixes CSP issues on S3)
+    document.querySelectorAll('.frame-btn').forEach(btn => {
+      btn.addEventListener('mouseenter', () => {
+        const gallery = btn.dataset.gallery;
+        document.querySelector(`.frame-img[data-gallery="${gallery}"]`).src = btn.dataset.src;
+        document.querySelectorAll(`.frame-btn[data-gallery="${gallery}"]`).forEach(b => {
+          b.classList.toggle('active', b === btn);
+        });
+      });
+    });
+  });
+ 
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.video-comp').forEach(column => {
+      const labelTable1 = createLabelTable(['Human Part', 'Semantic Seg.', 'Material Seg.', '', 'Human Part', 'Semantic Seg.', 'Material Seg.'], ['16.25%','16.25%','16.25%','2.5%','16.25%','16.25%','16.25%',]);
+      column.insertBefore(labelTable1, column.children[1]);
+    });
+  });
+</script>
+<!-- Scripts -->
+
+</body>
+</html>
+
