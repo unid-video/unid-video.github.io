@@ -2,8 +2,13 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-.container.is-max-desktop {
-  max-width: 95%; 
+.container {
+  max-width: 90% !important;
+}
+
+.container.is-max-desktop,
+.container.is-four-fifths {
+  max-width: 90% !important;
 }
 
 .footer .icon-link {

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="UniD — All Qualitative Comparison Videos">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniD — All Qualitative Comparison Videos</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar" role="navigation" aria-label="main navigation" style="position: sticky; top: 0; z-index: 30;">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="index.html">
+        <span class="icon"><i class="fas fa-arrow-left"></i></span>
+        <span>Back to Main Page</span>
+      </a>
+    </div>
+  </div>
+</nav>
+<div style="position: sticky; top: 52px; z-index: 29; height: 9px; background: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0)); pointer-events: none;"></div>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h1 class="title is-2">All Qualitative Comparison Videos</h1>
+        <p class="subtitle">UniD vs. DINOv3 across synthetic and in-the-wild scenes</p>
+      </div>
+    </div>
+
+    <!-- Synthetic -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 30pt;">
+      <div class="column">
+        <h2 class="title is-3">Synthetic, In-Domain Data</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/interiornet_3FO4JUMO81V5/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/interiornet_3FO4JUMO81V5/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/interiornet_3FO4JUMO81V5/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <!-- In-the-Wild -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 30pt;">
+      <div class="column">
+        <h2 class="title is-3">In-the-Wild, Out-of-Domain Data</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/atkIaj9LDYg/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/atkIaj9LDYg/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/atkIaj9LDYg/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/Gh2yGSTIiSI/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/Gh2yGSTIiSI/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/Gh2yGSTIiSI/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/_CDGCdwmlr0/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/_CDGCdwmlr0/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/_CDGCdwmlr0/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/xD8VN2r_h2s/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/xD8VN2r_h2s/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/xD8VN2r_h2s/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/x3rgdHiDN7U/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/x3rgdHiDN7U/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/x3rgdHiDN7U/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/TRITURnylYA/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/TRITURnylYA/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/TRITURnylYA/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/LyfG0y8J4OM/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/LyfG0y8J4OM/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/LyfG0y8J4OM/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/JNN3H6xLbWQ/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/JNN3H6xLbWQ/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/JNN3H6xLbWQ/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/JBUJLqpqzwY/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/JBUJLqpqzwY/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/JBUJLqpqzwY/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/JaSnvS-XNas/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/JaSnvS-XNas/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/JaSnvS-XNas/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 10pt; margin-bottom: -5pt;">
+      <div class="column"><h2 class="title is-4">DINOv3</h2></div>
+      <div class="column"><h2 class="title is-4">Ours</h2></div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: -5pt;">
+      <div class="column video-comp" style="text-align: center">
+        <video autoplay muted loop playsinline width="100%"> <source src="static/results/qual_comp/XmN5TD3AjMY/dino_vs_ours.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+    <div class="columns is-centered" style="margin-top: 0pt; margin-bottom: 50pt;">
+      <div class="column legend" style="text-align: left; display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;">
+        <p style="margin: 0; line-height: 28px;"><strong>Semantic Seg:</strong></p>
+        <img src="static/results/qual_comp/XmN5TD3AjMY/semseg_legend.jpg" style="max-height: 28px; width: auto;">
+        <p style="margin: 0; line-height: 28px;"><strong>Material Seg:</strong></p>
+        <img src="static/results/qual_comp/XmN5TD3AjMY/matseg_legend.jpg" style="max-height: 28px; width: auto;">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.video-comp').forEach(column => {
+      const table = document.createElement('table');
+      table.style = "border-collapse: collapse; width:100%; margin-top:0pt;margin-bottom:3pt; padding: 0; border: 0;";
+      const tr = document.createElement('tr');
+      tr.style = "margin: 0; border: 0";
+      const labels = ['Human Part', 'Semantic Seg.', 'Material Seg.', '', 'Human Part', 'Semantic Seg.', 'Material Seg.'];
+      const widths = ['16.25%','16.25%','16.25%','2.5%','16.25%','16.25%','16.25%'];
+      labels.forEach((label, i) => {
+        const td = document.createElement('td');
+        td.style = `width:${widths[i]}; padding: 0; margin: 0; border: 0; text-align: middle;`;
+        const h2 = document.createElement('h2');
+        h2.className = "has-text-centered subtitle is-6";
+        h2.textContent = label;
+        td.appendChild(h2);
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+      column.insertBefore(table, column.children[1]);
+    });
+  });
+</script>
+<!-- Scripts -->
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/unid-video/unid-video.github.io" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
+
+
+</body>
+</html>

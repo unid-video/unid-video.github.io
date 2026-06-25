@@ -4,7 +4,7 @@ This is the repository that contains source code for the [UniD website](https://
 
 If you find our work useful please cite:
 <pre>
-coming soon!
+Coming Soon!
 </pre>
 
 The website template is borrowed from [Nerfies](https://nerfies.github.io/).
