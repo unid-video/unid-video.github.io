@@ -243,9 +243,9 @@ html { scroll-behavior: smooth; }
   border-radius: 4px;
   padding: 1.75rem 2rem;
   margin: 2rem 0;
-  font-size: 1.15rem;
+  font-size: 1.22rem;
   font-weight: 500;
   color: var(--ink);
   line-height: 1.75;
 }
-.callout strong { color: var(--accent); font-size: 1.2rem; }
+.callout strong { color: var(--accent); font-size: 1.35rem; }
