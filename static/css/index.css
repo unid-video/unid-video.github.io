@@ -222,12 +222,12 @@ html { scroll-behavior: smooth; }
 }
 .motivation-card h4 {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   color: var(--ink);
 }
 .motivation-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--ink-light);
   line-height: 1.65;
   margin: 0;
@@ -239,12 +239,13 @@ html { scroll-behavior: smooth; }
 .callout {
   background: #fffaf9;
   border: 1.5px solid var(--accent-muted);
-  border-left: 4px solid var(--accent);
+  border-left: 6px solid var(--accent);
   border-radius: 4px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.75rem 2rem;
   margin: 2rem 0;
-  font-size: 0.95rem;
-  color: var(--ink-light);
-  line-height: 1.7;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.75;
 }
-.callout strong { color: var(--accent); }
+.callout strong { color: var(--accent); font-size: 1.2rem; }
